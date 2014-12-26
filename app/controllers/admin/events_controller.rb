@@ -9,6 +9,9 @@ module Admin
 
     # GET /events/1
     def show
+      attendee_subscribers = AttendeeApplication.newsletter_subscribers.pluck(:emaiL)
+      coach_subscribers = CoachApplication.newsletter_subscribers.pluck(:email)
+      @event_newsletter_subscribers = attendee_subscribers + coach_subscribers
     end
 
     # GET /events/new
