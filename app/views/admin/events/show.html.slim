@@ -33,7 +33,7 @@ p
   = @event.attendee_reg_end
 
 p
-  strong | Newsletter Subscribers
+  strong Newsletter Subscribers
   textarea(readonly)= @event_newsletter_subscribers.join(',')
 
 = link_to 'Edit', edit_admin_event_path(@event)
